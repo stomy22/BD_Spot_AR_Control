@@ -14,6 +14,7 @@ Control a Boston Dynamics Robot Dog with a Hololens 2. See the Livestreams of th
 - use windows 10
 - install unity 
 - load [hololens_handtracking](src/unity/) into Unity
+- you can find the scripts [here](src/unity/hololens_handtracking/Assets/Scripts/)
 
 ## important
 Advice:
