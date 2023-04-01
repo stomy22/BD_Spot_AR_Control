@@ -10,7 +10,7 @@ Control a Boston Dynamics Robot Dog with a Hololens 2. See the Livestreams of th
 - install these additional python librarys: numpy, opencv, threading
 - copy all the folder [python](src/python) to this computer
 
-### unity-pc
+### edge computer
 - use windows 10
 - install unity 
 - load [hololens_handtracking](src/unity/hololens_handtracking/) into Unity
