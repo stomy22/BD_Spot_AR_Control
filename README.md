@@ -24,7 +24,6 @@ always start the Linux Computer with the Python Script **Before** you start the 
 ![Setup](overview_github.png)
 
 ## Getting Started
-start every device and connect everything as it is shown in the setup graphic
 
 ### Hololens
 - [first usage Information](https://docs.microsoft.com/en-us/hololens/hololens2-setup)
