@@ -1,7 +1,7 @@
 # Boston Dynamics Spot with Augmented Reality
 
 ## Description
-Control a Boston Dynamics Robot Dog with a Hololens 2. See the Livestreams of the Cameras inside a virtual Environment and interact with Hand Gestures with the Roboter Dog's Arm.
+Control a Boston Dynamics robot dog with a Microsoft HoloLens 2. See the camera livestreams holographic streams and interact with hand gestures with the robot dog's arm.
 
 ## install instruction
 ### interface pc
@@ -67,10 +67,7 @@ Additional commands for advanced usage
 sudo -E python3 main.py --control
 
 # start only livestreams
-sudo -E python3 main.py --stream front_left front_right left right arm back --quality 25
-
-# start simulation 
-sudo -E python3 main.py --stream front_left front_right left right arm back --quality 25 --simulation
+sudo -E python3 main.py --stream front_left front_right left right arm back --quality 25cd 
 
 # additional Arguments
 --ip-hololens 0.0.0.0       # change IP of Hololens Computer, default: 192.168.2.4
