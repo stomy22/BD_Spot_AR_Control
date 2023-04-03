@@ -64,7 +64,7 @@ Additional commands for advanced usage
 sudo -E python3 main.py --control
 
 # start only livestreams
-sudo -E python3 main.py --stream front_left front_right left right arm back --quality 25cd 
+sudo -E python3 main.py --stream front_left front_right left right arm back --quality 25
 
 # additional Arguments
 --ip-hololens 0.0.0.0       # change IP of Hololens Computer, default: 192.168.2.4
