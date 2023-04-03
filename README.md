@@ -50,9 +50,7 @@ always start the Linux Computer with the Python Script **Before** you start the 
 - connect with interface pc to accespoint
 
 ### interface PC
-Connect XBox Controller to USB-Port of Linux Computer
-
-log into Linux Computer with SSH:
+Connect XBox Controller to USB-Port of interface pc
 
 start the python script
 ```bash
