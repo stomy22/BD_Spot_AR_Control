@@ -16,7 +16,7 @@ using System.Net.Sockets;
 using System.Threading;
 
 
-public class Handtracking : MonoBehaviour
+public class handtracking : MonoBehaviour
 {
     public TextMeshPro value_text;
     public GameObject feedback_cube;
@@ -56,19 +56,19 @@ public class Handtracking : MonoBehaviour
         Quaternion rotation = Quaternion.LookRotation(Camera.main.transform.forward, Vector3.up);
 
         // change to counter clockwise rotation
-        transformed_vector = Quaternion.AngleAxis(360 - rotation.eulerAngles[1], Vector3.up) * vector;
+        Vector3 transformed_vector = Quaternion.AngleAxis(360 - rotation.eulerAngles[1], Vector3.up) * vector;
         return transformed_vector;
     }
 
     bool checkJointPose(){
         bool jointPose = true;
-        if !(HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out pose_ri)){
+        if (!HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out pose_ri)){
             jointPose = false;}
-        if !(HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbTip, Handedness.Right, out pose_rt)){
+        if (!HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbTip, Handedness.Right, out pose_rt)){
             jointPose = false;}
-        if !(HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexKnuckle, Handedness.Right, out pose_rik)){
+        if (!HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexKnuckle, Handedness.Right, out pose_rik)){
             jointPose = false;}
-        if !(HandJointUtils.TryGetJointPose(TrackedHandJoint.PinkyKnuckle, Handedness.Right, out pose_rpk)){
+        if (!HandJointUtils.TryGetJointPose(TrackedHandJoint.PinkyKnuckle, Handedness.Right, out pose_rpk)){
             jointPose = false;}
         if(!jointPose){
             airtap_right = false;
@@ -100,7 +100,7 @@ public class Handtracking : MonoBehaviour
         return false;
     }
 
-    bool isAirtap(){
+    void isAirtap(){
         airtap_vector_right = pose_ri.Position - pose_rt.Position;
         feedback_cube.transform.position = pose_ri.Position;
 
@@ -177,7 +177,8 @@ public class Handtracking : MonoBehaviour
     }
     void Update(){
         text_right = location.ToString();
-        if(checkJointPose() and isGestureCorrectRecognised() and isAirtap()){ 
+        isAirtap();
+        if(checkJointPose() && isGestureCorrectRecognised() && airtap_right){
             location = pose_rik.Position - start_position_right;
             location = transform_relative_to_camera(location);
 

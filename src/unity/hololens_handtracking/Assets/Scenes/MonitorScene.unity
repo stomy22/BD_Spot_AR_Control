@@ -4018,7 +4018,6 @@ GameObject:
   - component: {fileID: 291815052}
   - component: {fileID: 291815053}
   - component: {fileID: 291815054}
-  - component: {fileID: 291815055}
   m_Layer: 0
   m_Name: Content
   m_TagString: Untagged
@@ -4059,9 +4058,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 291815051}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5dfedbaa17b7c641912c1d0a3ff88ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b3114576a7a9f844aa4dc317d9c0df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eye_cube: {fileID: 1029403735}
 --- !u!114 &291815054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4075,21 +4075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value_text: {fileID: 633816894}
-  cube: {fileID: 1029403735}
-  arm_cube: {fileID: 1202603392}
---- !u!114 &291815055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 291815051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e78d43e792d7a34f9dcdc83f0f1f06e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eye_cube: {fileID: 1202603392}
+  feedback_cube: {fileID: 1202603392}
 --- !u!1 &293139284
 GameObject:
   m_ObjectHideFlags: 0
@@ -9620,7 +9606,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StreamName: front_right
+  ipNuk: 192.168.2.5
   image: {fileID: 1678575729}
+  fps_text: {fileID: 0}
 --- !u!1 &633816892
 GameObject:
   m_ObjectHideFlags: 0
@@ -10087,7 +10075,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StreamName: front_left
+  ipNuk: 192.168.2.5
   image: {fileID: 1975466814}
+  fps_text: {fileID: 0}
 --- !u!1 &686497422
 GameObject:
   m_ObjectHideFlags: 0
@@ -18951,7 +18941,7 @@ Transform:
   m_GameObject: {fileID: 1202603392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.079, y: -0.207, z: 1}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -19031,7 +19021,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StreamName: left
+  ipNuk: 192.168.2.5
   image: {fileID: 895081836}
+  fps_text: {fileID: 0}
 --- !u!1 &1205494933
 GameObject:
   m_ObjectHideFlags: 0
@@ -27944,7 +27936,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StreamName: arm
+  ipNuk: 192.168.2.5
   image: {fileID: 1307322249}
+  fps_text: {fileID: 0}
 --- !u!1 &1593242957
 GameObject:
   m_ObjectHideFlags: 0
@@ -33207,7 +33201,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StreamName: back
+  ipNuk: 192.168.2.5
   image: {fileID: 518703186}
+  fps_text: {fileID: 0}
 --- !u!1 &1867835548
 GameObject:
   m_ObjectHideFlags: 0
@@ -34197,7 +34193,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StreamName: right
+  ipNuk: 192.168.2.5
   image: {fileID: 435164847}
+  fps_text: {fileID: 0}
 --- !u!1 &1942226498
 GameObject:
   m_ObjectHideFlags: 0

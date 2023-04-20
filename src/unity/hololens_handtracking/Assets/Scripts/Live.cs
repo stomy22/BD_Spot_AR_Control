@@ -128,7 +128,7 @@ public class Live : MonoBehaviour
             tex.Apply();
             updateImg = false;
             insertNewValue((int)sw2.ElapsedMilliseconds);
-            fps_text.SetText("FPS: " + getAverage(fps).ToString());
+            //fps_text.SetText("FPS: " + getAverage(fps).ToString());
             sw2.Restart();
         }
     }

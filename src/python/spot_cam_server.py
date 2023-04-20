@@ -214,7 +214,7 @@ class SpotStream:
         self.update_current_block()
 
         requests = [
-            build_image_request(source, quality_percent=self.jpg_quality, pixel_format=self.pixel_format)
+            build_image_request(source, quality_percent=self.jpg_quality, pixel_format=self.pixel_format) # image_format=jpeg
             for source in image_sources
         ]
         try:

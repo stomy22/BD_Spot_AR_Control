@@ -680,10 +680,11 @@ class SpotControl:
 
         return deviation
 
-    def get_pose_from_position(position):
+    def get_pose_from_position(self, position):
         hand_position = geometry_pb2.Vec3(x=position[0], y=position[1], z=position[2])
         hand_quaternion = geometry_pb2.Quaternion(w=1, x=0, y=0, z=0)
         hand_pose = geometry_pb2.SE3Pose(position=hand_position, rotation=hand_quaternion)
+        hand_pose = math_helpers.SE3Pose.from_obj(hand_pose)
         return hand_pose
 
     def arm_control(self):
